@@ -12,12 +12,17 @@
   --font-family: "Murecho", sans-serif;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
   background-image: url("images/bg.jpg"); 
   color: var(--text-color);
   font-family: var(--font-family);
   line-height: 1.6;
-  font-family: "Murecho", sans-serif;
+  /* font-family: "Murecho", sans-serif; */
+  font-size: clamp(1.4rem, 4vw, 1.6rem);
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
@@ -46,40 +51,38 @@ header {
 
 .header-content {
     display: grid;
-    /* grid-template-areas:
-    "a c"
-    "b d"; */
     grid-template-columns: repeat(2, minmax(450px, 1fr));
     gap: 16px;
     margin: 0 auto;    
 }   
 
 h1 {
-    /* display: inline-block; */
-    font-size: 2.5em;
+    font-size: clamp(3rem, 4vw, 4.6rem);
     color: #333;
     margin-bottom: 10px;
     text-align: center;
 }
+
 h2 {
-    /* display: inline-block; */
-    font-size: 1.5em;
+    font-size: clamp(1.6rem, 3vw, 2.3rem);
     color: #555;
-    /* margin-bottom: 20px; */
     text-align: center;
 }
 
 h3 {
-    /* display: inline-block; */
-    font-size: 1.2em;
-    color: #777;
-    margin-top:  10px;    
+    font-size: clamp(1.4rem, 2.5vw, 2.3rem);
+    color: var(--secondary-color);
+    text-align: center;
+}
+
+h4 {
+    font-size: clamp(1.6rem, 3vw, 2.3rem);
+    color: #555;
     margin-bottom: 20px;
     text-align: center;
 }
 
 .tel-btn {
-    /* display: inline-block; */
     padding: 10px 50px;
     background-color: var(--primary-color);
     color: #fff;
@@ -94,6 +97,7 @@ h3 {
     font-size: 1.3em;
     font-weight: bold;
     text-align: center;
+    padding-bottom: 5px;
 }   
 
 .car-image {
@@ -104,44 +108,47 @@ h3 {
     display: block; /* 画像をブロック要素にして中央に配置 */
 }
 
-section {
-    /* background-color: #c28f32; */
-    padding: 20px;
-    text-align: center;
-}
-
 main {
     display: block;
-    background-color: rgba(255, 255, 255, 0.5);
     padding: 20px;
     text-align: center;
     margin-top: 100px;
 }   
 
+section {
+    background-color: rgba(255, 255, 255, 0.5);
+    /* padding: 20px; */
+    text-align: center;
+}
+
+
 .box {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     padding: 20px;
+    /* width: 600px; */
 }
 
 .card { 
-max-width: 450px;
-height: 400px;
-margin: 0 5px;
-background-color: #ffffffe7;
-text-align: left;
-padding: 20px; 
-border: 6px double #312f2a3d; 
+    max-width: 450px;
+    height: 400px;
+    margin: 0 5px;
+    background-color: #ffffffe7;
+    text-align: left;
+    padding: 20px; 
+    border: 6px double #312f2a3d; 
+    flex: 1 1 400px; /* カードの幅を柔軟に調整 */
 }
 
 .card.two { 
-max-width: 900px;
-height: 400px;
-/* margin: 0 20px; */
-background-color: #fff;
-margin: 0 auto; /* カードを中央に配置 */
+    max-width: 900px;
+    height: 400px;
+    background-color: #fff;
+    margin: 0 auto; /* カードを中央に配置 */
+    padding: 30px;
 }
 
 dd {
