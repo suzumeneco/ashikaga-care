@@ -18,6 +18,8 @@ html {
 
 body {
   background-image: url("images/bg.jpg"); 
+  background-size: cover;
+  background-position: center;
   color: var(--text-color);
   font-family: var(--font-family);
   line-height: 1.6;
@@ -177,9 +179,9 @@ dd::before {
  footer {
   /* background-color: #fc58cb; */
   display: flex;
-  /* flex-direction: column; 縦並び */
-  /* align-items: center;  */
-  /* margin: 0 auto; */
+  flex-direction: column; 
+  align-items: center; 
+  margin: 0 auto;
 }
 
 .yokota-image {
