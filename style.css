@@ -37,31 +37,45 @@ body {
   font-style: normal;
 } */
 
+    /* background-color: #f8f8f8;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px; */
+    /* margin: 0 auto;     */
+    /* padding: 20px; */
+    /* text-align: center;
+    z-index: 999;  */
+/* } */
+
+/* .header-content { */
 header {
-    display: block;
     background-color: #f8f8f8;
     position: fixed;
     top: 0;
     left: 0;
-    /* margin: 0 auto;     */
     width: 100%;
-    height: 100px;
-    /* padding: 20px; */
+    /* width: clamp(100%, 600px, 100%); */
+    height: 150px;
     text-align: center;
     z-index: 999; 
-}
 
-.header-content {
-    display: grid;
+    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     grid-template-columns: repeat(2, minmax(450px, 1fr));
-    gap: 16px;
+    /* gap: 16px; */
     margin: 0 auto;    
 }   
 
 h1 {
     font-size: clamp(3rem, 4vw, 4.6rem);
     color: #333;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
     text-align: center;
 }
 
@@ -103,7 +117,7 @@ h4 {
 }   
 
 .car-image {
-    width: 30%;
+    width: 40%;
     max-width: 400px;
     height: auto;
     margin: 0 auto /* 画像を中央に配置 */;
@@ -112,9 +126,9 @@ h4 {
 
 main {
     display: block;
-    padding: 20px;
+    padding-top: 160px;
     text-align: center;
-    margin-top: 100px;
+    /* margin-top: 10px; */
 }   
 
 section {
@@ -188,15 +202,27 @@ dd::before {
     width: 300px;
     height: auto;
 }
-
 address {
   text-align: right; /* PCでもスマホでも右揃え */
   margin-top: 12px;
 }
-
+.copyright {
+  text-align: center;
+  margin-top: 12px;
+}
 
 /* PC：横並びに変更（768px以上） */
 @media (min-width: 768px) {
+  header {
+    flex-direction: row; /* 横並び */
+    align-items: center;
+    justify-content: space-around; /* タイトルと連絡先を両端に配置 */
+    height: 100px;
+
+  }
+  main {
+    padding-top: 110px;
+  }   
   footer {
     flex-direction: row; /* 横並び */
     align-items: center;
